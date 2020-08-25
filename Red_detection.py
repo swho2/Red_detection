@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
+import math
 
 cap = cv2.VideoCapture(0)
 
-
+a=1
 while(cap.isOpened()):
     ret, frame = cap.read()
     frame = cv2.flip(frame,0)
