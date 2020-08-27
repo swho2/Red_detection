@@ -11,14 +11,10 @@ class FindNonZero:
         for i in range(height):
             for j in range(width):
                 if img[int(i),int(j)] > 0:
-                    for find in range (i,height):
-                        if img[int(find),int(j)] != 0:
-                            count_img += 1
-                        else:
-                            break
+                    count_img += 1
                 else:
-                    continue
-        print(count_img)
+                    pass
+        print("size: ",count_img)
 
 
 while(cap.isOpened()):
