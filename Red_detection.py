@@ -26,7 +26,32 @@ class FindNonZero:
     #def FindContour(size,):
     #    if size > 10000:
 
-
+class Findcenter:
+    def wherecenter(height,width,img): #빨간색물체의 중심을 찾는 함수 
+        height_img = np.array([])
+        width_img = np.array([])
+        bottom_img = np.array([])
+        for i in range(height):
+            for j in range(width):
+                if img[int(i),int(j)]>0:
+                    height_img = np.append(height_img, i)
+                    width_img = np.append(width_img, j)
+                else:
+                    pass
+        for i in range(height_img[0],height):
+            if img[int(i),width_img[0]]>0:
+                pass
+            else:
+                bottom_img = np.append(bottom_img, i)
+        print("center's height: ",int((height_img[0]+bottom_img[0])/2))
+        print("center's width: ",width_img[0])
+        if width_img[0]>(width/2):
+            print("go left")
+        if width_img[0]<(width/2):
+            print("go right")
+        if width_img[0]==(width/2):
+            print("center")
+        
 
 
 while(cap.isOpened()):
